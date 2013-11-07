@@ -1,0 +1,61 @@
+<%= form_for(@ctec) do |f| %>
+  <% if @ctec.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ctec.errors.count, "error") %> prohibited this ctec from being saved:</h2>
+
+      <ul>
+      <% @ctec.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :course_ID %><br>
+    <%= f.number_field :course_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :instr_rating %><br>
+    <%= f.number_field :instr_rating %>
+  </div>
+  <div class="field">
+    <%= f.label :course_rating %><br>
+    <%= f.number_field :course_rating %>
+  </div>
+  <div class="field">
+    <%= f.label :learned_rating %><br>
+    <%= f.number_field :learned_rating %>
+  </div>
+  <div class="field">
+    <%= f.label :challenging_rating %><br>
+    <%= f.number_field :challenging_rating %>
+  </div>
+  <div class="field">
+    <%= f.label :interest_rating %><br>
+    <%= f.number_field :interest_rating %>
+  </div>
+  <div class="field">
+    <%= f.label :school %><br>
+    <%= f.text_field :school %>
+  </div>
+  <div class="field">
+    <%= f.label :class %><br>
+    <%= f.text_field :class %>
+  </div>
+  <div class="field">
+    <%= f.label :reason %><br>
+    <%= f.text_field :reason %>
+  </div>
+  <div class="field">
+    <%= f.label :interest_before %><br>
+    <%= f.number_field :interest_before %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<h1>Listing user_reviews</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User id</th>
+      <th>Course id</th>
+      <th>Rating</th>
+      <th>Review</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_reviews.each do |user_review| %>
+      <tr>
+        <td><%= user_review.user_ID %></td>
+        <td><%= user_review.course_ID %></td>
+        <td><%= user_review.rating %></td>
+        <td><%= user_review.review %></td>
+        <td><%= link_to 'Show', user_review %></td>
+        <td><%= link_to 'Edit', edit_user_review_path(user_review) %></td>
+        <td><%= link_to 'Destroy', user_review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User review', new_user_review_path %>
