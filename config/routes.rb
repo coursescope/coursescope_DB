@@ -1,4 +1,12 @@
 CourseScope::Application.routes.draw do
+  resources :terms
+
+  resources :subjects
+
+  resources :careers
+
+  resources :descriptions
+
   resources :ctecs
 
   resources :classrooms

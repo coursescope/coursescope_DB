@@ -32,6 +32,17 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'figaro'
+gem 'thin'
+gem 'mechanize'
+gem 'delayed_job_active_record'
+gem 'foreman'
+
+group :development do
+	gem "quiet_assets"
+	gem "better_errors"
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

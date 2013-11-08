@@ -1,7 +1,7 @@
 class CreateCtecs < ActiveRecord::Migration
   def change
     create_table :ctecs do |t|
-      t.integer :course_ID
+      t.integer :course_id
       t.text :description
       t.integer :instr_rating
       t.integer :course_rating
@@ -15,5 +15,6 @@ class CreateCtecs < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :ctecs, :course_id
   end
 end
